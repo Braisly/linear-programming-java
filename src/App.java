@@ -39,7 +39,7 @@ public class App {
 		 
 		 try {
 			 solution = new SimplexSolver()
-					 .optimize(f,new LinearConstraintSet(constraints),GoalType.MAXIMIZE);
+					 .optimize(new MaxIter(10),f,new LinearConstraintSet(constraints),GoalType.MAXIMIZE);
 		 }
 		 catch (Exception e) {
 			 e.printStackTrace();
